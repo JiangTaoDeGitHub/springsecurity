@@ -52,6 +52,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();
     }
 
+    /**
+    * 注入authenticationManager 以免启动报错
+    * */
     @Bean
     @Override
     protected AuthenticationManager authenticationManager() throws Exception {
